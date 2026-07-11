@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <button id="btnUbah" class="bg-red-500 text-white p-4 rounded-full">Klik Aku</button>
+    <p id="teks">Teks ini akan berubah.</p>
+
+    <script>
+        // 1. Seleksi
+        const tombol = document.getElementById('btnUbah');
+        const paragraf = document.getElementById('teks');
+
+        // 2. Event Listener
+        tombol.addEventListener('click', () => {
+            alert('ini telah di klik');
+            // 3. Manipulasi
+            paragraf.innerText = 'Wah, teksnya berubah!';
+            paragraf.style.color = 'green';
+        });
+    </script>
+</body>
+</html>
